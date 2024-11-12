@@ -1,0 +1,349 @@
+:root{
+    --GrisSuave: rgb(132, 132, 132);
+    --Verde: rgb(82, 145, 124);
+    --Blanco: rgb(244, 247, 246);
+    --Sombra: 1px 1px 20px var(--GrisSuave);
+    --AzulOscuro: rgb(3, 3, 60);
+}
+
+/*General*/
+
+/*Header*/
+
+/*Main*/
+.fondo{
+    border-bottom: 1.5vh solid white;
+    margin: 70px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 85vw;
+    max-height: 78vh;
+}
+.fondo-imagen{
+    max-height: 78vh;
+    z-index: -1;
+}
+
+/*Main seccion 1*/
+.personal{
+    max-width: 700px;
+    margin: 150px auto;
+    justify-items: center;
+    position: relative;
+}
+.personal::after{
+    content: "";
+    background-color: var(--AzulOscuro);
+    border-radius: 5PX;
+    height: 3px;
+    width: 120%;
+    max-width: 90vw;
+    position: absolute;
+    top: 500px;
+    left: 19px;
+}
+.personal-imagen{
+    margin-bottom: 30px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px var(--GrisSuave);
+}
+.personal-titulo2{
+    margin-bottom: 0px;
+}
+.personal-titulo3{
+    margin-top: 2px;
+}
+.personal-boton{
+    margin-top: 10px;
+}
+.personal-texto{
+    margin: 75px 25px 16px;
+    line-height: 28px;
+    font-size: 16px;
+    max-width: 500px;
+}
+
+
+
+
+/*Main seccion 2*/
+.servicios{
+    border: none;
+    max-width: 670px;
+    margin: 100px auto 240px;
+    justify-items: center;
+    position: relative;
+}
+.servicios-link{
+    padding-left: 10px;
+    text-decoration: none;
+    color: black;
+}
+.servicios-imagen{
+    width: 315px;
+    transition: 0.3s;
+}
+.servicios-titulo1{
+    font-size: 35px;
+    position: relative;
+    width: 230px;
+}
+.servicios-titulo1::before{
+    position: absolute;
+    content: "";
+    background-color: var(--Verde);
+    width: 40vw;
+    height: 50px;
+    top: -3px;
+    right: 240px;
+}
+.servicios-titulo{
+    padding-left: 10px;
+    font-size: 30px;
+}
+.servicios-texto{
+    padding-left: 10px;
+}
+.servicios-articulo{
+    background-color: var(--Blanco);
+    width: 315px;
+    padding: 10px;
+    padding-bottom: 30px;
+    margin: 100px 0px 0px;
+    transition: 0.3s;
+}
+.servicios::before{
+    content: "";
+    backdrop-filter: hue-rotate(50deg) brightness(125%);
+    width: 150vw;
+    height: 1430px;
+    position: absolute;
+    top: -10px;
+    left: -45vw;
+    z-index: -1;
+}
+/*Main seccion 3*/
+.blog{
+    box-shadow: var(--Sombra);
+    background-color: white;
+    padding: 5vw;
+    width: 82vw;
+    border-radius: 5px;
+    max-width:1100px;
+    margin: 0px auto 100px;
+}
+.blog-articulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.blog-titulo{
+    padding-left: 20px;
+    font-size: 30px;
+}
+.blog-boton{
+    margin-top: 2vw;
+    align-self: center;
+    justify-self: center;
+}
+.blog-imagen{
+    margin-top: 60px;
+    margin-bottom: 20px;
+    width: 80vw;
+    max-width: 400px;
+}
+
+/*Footer*/
+
+/*Efectos*/
+
+/*Movil 2*/
+@media(min-width: 410px){
+    /*General*/
+    /*Header*/
+    /*Main*/
+    /*Main seccion 1*/
+    /*Main seccion 2*/
+    .servicios-imagen{
+        width: 345px;
+    }
+    .servicios-articulo{
+        width: 345px;
+    }
+    /*Main seccion 3*/
+    /*Footer*/
+}
+
+/*Tablet*/
+@media(min-width: 710px){
+    /*General*/
+    /*Header*/
+    /*Main*/
+    /*Main seccion 1*/
+    .personal{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        row-gap: 100px;
+        align-items: center;
+    }
+    .personal::after{
+        top: 360px;
+        left:unset;
+    }
+    .personal-imagen{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .personal-titulo2{
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .personal-titulo3{
+        padding-top: 30px;
+        margin-top: 20px;
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .personal-link{
+        margin-top: 130px;
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .personal-texto{
+        margin-top: 16px;
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+
+
+    /*Main seccion 2*/
+    .servicios{
+        justify-items: right;
+        margin: 100px auto 360px;
+    }
+    .servicios-boton{
+        position: absolute;
+        right: 20px;
+        bottom: 35px;
+    }
+    .servicios::before{
+        height: 1750px;
+    }
+    .servicios-imagen{
+        box-shadow: var(--Sombra);
+        width: 630px;
+        height: 310px;
+        border: 15px solid var(--Blanco);
+        border-radius: 5px;
+        position: absolute;
+        left: -80px;
+        top: -270px;
+    }
+    .servicios-titulo{
+        margin-bottom: 0px;
+        font-size: 30px;
+    }
+    .servicios-titulo1{
+        padding-top: 20px;
+        margin-right: 40vw;
+        justify-self: center;
+    }
+    .servicios-titulo1::before{
+        top: 17px;
+        right: 240px;
+    }
+    .servicios-articulo{
+        border-radius: 5px;
+        padding: 20px;
+        padding-right: 70px;
+        height: 270px;
+        width: 510px;
+        margin: 400px 0px 0px;
+        position: relative;
+        align-content: end;
+    }
+
+    /*Main seccion 3*/
+    .blog{
+        padding: 7vw;
+        height: 58vw;
+        max-height: 500px;
+    }
+    .blog-articulo{
+        flex-direction: row;
+    }
+    .blog-apartado{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .blog-titulo3, .blog-titulo2, .blog-titulo4{
+        margin: 8px 0px;
+        text-align: center;
+    }
+    .blog-boton{
+
+    }
+    .blog-imagen{
+        width: 40vw;
+        margin-left: 30px;
+    }
+    /*Footer*/
+}
+/*Escritorio*/
+@media(min-width: 960px){
+    /*General*/
+    /*Header*/
+    /*Main*/
+    /*Main seccion 1*/
+    /*Main seccion 2*/
+    .servicios{
+        max-width: 900px;
+    }
+    .servicios-boton{
+        right: 80px;
+    }
+    .servicios-imagen{
+        width: 830px;
+        height: 390px;
+        left: -190px;
+        top: -200px;
+    }
+    .servicios-titulo{
+        padding-top: 30px;
+        padding-left: 20px;
+    }
+    .servicios-texto{
+        padding-left: 20px;
+    }
+    .servicios-articulo{
+        box-shadow: 1px 1px 20px gainsboro;
+        width: 600px;
+    }
+    .servicios-articulo:hover{
+        transform: translateY(145px);
+        background-color: white;
+        box-shadow: var(--Sombra);
+        .servicios-imagen{
+            transform: translateY(-145px);
+            border-color: var(--Verde);
+        }
+    }
+
+    /*Main seccion 3*/
+    .blog{
+        padding: 80px;
+    }
+    .blog-imagen{
+        margin-top: 50px;
+        margin-left: 100px;
+    }
+    /*Footer*/
+}

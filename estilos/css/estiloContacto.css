@@ -1,0 +1,166 @@
+:root{
+    --GrisSuave: rgb(132, 132, 132);
+    --Negro: rgb(10, 20, 40);
+}
+
+/*General*/
+.cuadrante{
+    padding: 10px;
+    box-shadow: 1px 1px 20px gainsboro;
+    border-radius: 5px;
+    width: 410px;
+    height: 150px;
+    background-color: var(--Negro);
+    margin: 25px 0px;
+    
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.cuadrante__imagen{
+    height: 50px;
+    width: 50px;
+    border-radius: 20px;
+    margin: 30px 0px;
+    padding: 20px;
+    border: 6px solid var(--GrisSuave);
+    transition: 0.3s;
+    background-color: white;
+}
+.cuadrante__titulo{
+    width: 180px;
+    color: white;
+}
+.cuadrante__texto{
+    width: 180px;
+    margin-top: 0px;
+    color: white;
+}
+.cuadrante__link{
+    width: 180px;
+    margin-bottom: 15px;
+    display: block;
+    text-decoration: none;
+    color: lightgreen;
+}
+.cuadrante__link2{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cuadrante__correo{
+    display: inline-block;
+}
+.cuadrante__titulo4{
+    color: white;
+    margin-bottom: 0px;
+}
+.cuadrante__link:hover{
+    text-decoration: underline;
+}
+/*Header*/
+
+/*Main*/
+.principal-cuadrante{
+    max-width: 1000px;
+    margin: 150px auto 100px;
+    box-shadow: 1px 1px 20px gainsboro;
+    padding: 20px;
+    border-radius: 7px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+}
+/*Sección 1*/
+
+/*Sección 2*/
+
+/*Sección 3*/
+.direccion{
+    height: 200px;
+}
+/*Sección 4*/
+.RedesSociales{
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*Sección 5*/
+.ubicacion{
+    margin: 100px 0px;
+    justify-items: center;
+}
+.ubicacion-titulo{
+    width: 90vw;
+    max-width: 1400px;
+}
+.ubicacion-mapa{
+    width: 90vw;
+    max-width: 1400px;
+    box-shadow: 1px 1px 20px var(--GrisSuave);
+    border-radius: 5px;
+}
+
+
+/*Footer*/
+
+/*Efectos*/
+
+/*Movil 2*/
+@media(min-width: 470px){
+    /*General*/
+    .cuadrante{
+        padding: 20px;
+    }
+    .cuadrante__imagen{
+        margin: 30px 0px;
+        padding: 35px;
+    }
+    .cuadrante__titulo{
+        width: 220px;
+    }
+    .cuadrante__texto{
+        width: 220px;
+    }
+    .cuadrante__link{
+        width: 220px;
+    }
+    .cuadrante__link2{
+        width: 250px;
+    }
+    .direccion{
+        height: 150px;
+    }
+    /*Header*/
+
+    /*Main*/
+    /*Sección 1*/
+    /*Sección 2*/
+    /*Sección 3*/
+    /*Sección 4*/
+    /*Sección 5*/
+    /*Footer*/
+
+}
+/*Escritorio*/
+@media(min-width: 800px){
+    /*General*/
+    .cuadrante{
+        margin: 25px 15px;
+    }
+    /*Header*/
+
+    /*Main*/
+    /*Sección 1*/
+    /*Sección 2*/
+    /*Sección 3*/
+    /*Sección 4*/
+    /*Sección 5*/
+    /*Footer*/
+
+}
