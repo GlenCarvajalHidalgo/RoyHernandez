@@ -55,7 +55,7 @@ html{
 }
 .fondo-verde::before, .fondo-claro::before, .fondo-negro::before{
     content: "";
-    background-image: url(/multimedia/imgs/fondo\ verde\ claro2.jpg);
+    background-image: url(https://glencarvajalhidalgo.github.io/RoyHernandez/multimedia/imgs/fondo\ verde\ claro2.jpg);
     width: 100vw;
     height: 100vh;
     position: fixed;
