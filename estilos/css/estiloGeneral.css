@@ -7,6 +7,7 @@
     --Sombra: 1px 1px 20px var(--GrisSuave);
     --AzulOscuro: rgb(3, 3, 60);
     --VerdeTransparente: rgba(124, 224, 224, 0.6);
+    --VerdeTransparente2: rgba(124, 224, 224, 0.8);
     --Verde2: #007e63b0;
     --VerdeClaro: rgb(136, 195, 176);
 }
@@ -82,7 +83,6 @@ html{
     width: 175px;
     border-radius: 20px;
 }
-
 .boton:hover{
     background-color: var(--VerdeClaro);
     box-shadow: 1px 1px 5px var(--GrisSuave);
@@ -126,7 +126,7 @@ html{
     max-width: 350px;
     height: 100%;
     position: relative;
-    background-color: var(--VerdeTransparente);
+    background-color: var(--VerdeTransparente2);
     backdrop-filter: blur(15px) ;
     position: fixed;
     top: 0px;
@@ -138,7 +138,7 @@ html{
     flex-direction: column;
     justify-content: start;
     align-items: left;
-    z-index: 10;
+    z-index: 12;
 }
 .cabecera-navegacion2.active{
     right: 0px;
@@ -154,7 +154,9 @@ html{
     position: relative;
 }
 .cabecera-navegacion2__link:hover{
-    background-color: var(--verde2);
+    background-color: var(--verde);
+    color: white;
+    text-shadow: 0px 0px 2px var(--AzulOscuro);
 }
 .cabecera-boton{
     position: fixed;
@@ -162,13 +164,24 @@ html{
     right: 28px;
     height: 45px;
     width: 55px;
-    z-index: 12;
+    z-index: 11;
     background-color: rgba(255, 255, 255, 0);
     border: 0px;
+    transition: 0.1s;
+}
+.cabecera-boton.active{
+    background-color: rgba(128, 128, 128, 0.4);
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    right: 0px;
 }
 .cabecera-imagen{
-    height: 30px;
-    width: 35px;
+    height: 27px;
+    width: 33px;
+    position: fixed;
+    top: 38px;
+    right: 38px;
 }
 .logo{
     height: 80px;
@@ -228,6 +241,7 @@ html{
         left: 0px;
         padding-top: 0px;
         transition: 0s;
+        background-color: var(--VerdeTransparente);
     
         flex-direction: row;
         justify-content: right;
